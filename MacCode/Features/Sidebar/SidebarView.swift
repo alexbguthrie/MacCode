@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SidebarView: View {
+
     @StateObject private var model = SidebarViewModel()
     @EnvironmentObject var docs: DocumentManager
 
@@ -22,10 +23,20 @@ struct SidebarView: View {
         .onAppear {
             model.loadDirectory(FileManager.default.homeDirectoryForCurrentUser)
         }
+
+    var body: some View {
+        List {
+            Text("Sidebar")
+        }
+        .frame(minWidth: 200)
+
     }
 }
 
 #Preview {
     SidebarView()
+
         .environmentObject(DocumentManager())
+
+
 }

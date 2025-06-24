@@ -14,7 +14,10 @@ struct MacCodeApp: App {
                     MainEditorView()
                 }
             }
+
             .environmentObject(documents)
+=======
+
         }
     }
 }

@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct TabBarView: View {
+
     @EnvironmentObject var docs: DocumentManager
 
     var body: some View {
@@ -19,11 +20,23 @@ struct TabBarView: View {
             .frame(height: 28)
             .padding(.horizontal, 8)
         }
+
+    var body: some View {
+        HStack {
+            Text("Tab 1")
+            Spacer()
+        }
+        .frame(height: 28)
+        .padding(.horizontal, 8)
+
         .background(.gray.opacity(0.1))
     }
 }
 
 #Preview {
     TabBarView()
+
         .environmentObject(DocumentManager())
+=======
+
 }
