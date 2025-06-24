@@ -11,7 +11,14 @@ import SwiftUI
 struct MacCodeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationSplitView {
+                SidebarView()
+            } detail: {
+                VStack(spacing: 0) {
+                    TabBarView()
+                    MainEditorView()
+                }
+            }
         }
     }
 }
